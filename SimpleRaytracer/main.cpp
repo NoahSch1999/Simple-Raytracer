@@ -1,4 +1,4 @@
-﻿#define STB_IMAGE_WRITE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
 
 #include "SimpleRaytracer.h"
 #include <vector>
@@ -15,7 +15,7 @@ int main()
 
 	std::vector<std::unique_ptr<Shape>> shapes;
 	shapes.emplace_back(std::make_unique<Sphere>(Sphere(Vector3D(255, 0, 0), Vector3D(100, HEIGHT / 2.0, 170), 50)));
-	shapes.emplace_back(std::make_unique<Plane>(Plane(Vector3D(255.0, 0.0, 255.0), Vector3D(0, 0, -1), 170)));
+	shapes.emplace_back(std::make_unique<Plane>(Plane(Vector3D(255.0, 255.0, 255.0), Vector3D(0, 0, -1), 170)));
 	shapes.emplace_back(std::make_unique<Triangle>(Triangle(Vector3D(255, 0, 0), Vector3D(200, 400, 50), Vector3D(400, HEIGHT / 2.0, 150), Vector3D(400, 100, 100))));
 	shapes.emplace_back(std::make_unique<Sphere>(Sphere(Vector3D(0, 255, 0), Vector3D(400, HEIGHT / 2.0, 110), 70)));
 	shapes.emplace_back(std::make_unique<OBB>(OBB(Vector3D(255, 150, 0), Vector3D(200, HEIGHT / 2.0, 150), Vector3D(0.5, 0, -0.866), Vector3D(0.749, 0.5, 0.433), Vector3D(0.433, -0.866, 0.25), 100, 100, 100)));
